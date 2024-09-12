@@ -14,7 +14,7 @@ RUN apt-get update -m; apt-get install -y wget \
     && apt-key del 7fa2af80 \
     && dpkg -i cuda-keyring_1.0-1_all.deb
 
-RUN apt-get update && apt-get install -y git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 libgl1-mesa-glx\
+RUN apt-get update -m; apt-get install -y git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 libgl1-mesa-glx\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
